@@ -10,13 +10,6 @@ import com.android.catalog.data.source.Category
 import com.android.catalog.databinding.HolderCategoryBinding
 import java.util.ArrayList
 
-/**
- * [android.support.v7.widget.RecyclerView.Adapter] to adapt
- * [Category] items into [RecyclerView] via [CategoryViewHolder]
- *
- *
- * Created by ZARA on 27/01/2019.
- */
 internal class CategoriesAdapter(private val listener: OnCategoriesAdapterListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -53,9 +46,6 @@ internal class CategoriesAdapter(private val listener: OnCategoriesAdapterListen
         notifyDataSetChanged()
     }
 
-    /**
-     * Holder of [Category]
-     */
     inner class CategoryViewHolder(dataBinding: ViewDataBinding) : RecyclerView.ViewHolder(dataBinding.root) {
 
         private val dataBinding: ViewDataBinding

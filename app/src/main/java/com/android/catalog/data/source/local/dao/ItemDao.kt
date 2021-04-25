@@ -6,7 +6,6 @@ import com.android.catalog.data.Item
 @Dao
 interface ItemDao {
 
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(item: Item)
 

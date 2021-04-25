@@ -11,13 +11,6 @@ import com.android.catalog.databinding.HolderItemBinding
 import com.squareup.picasso.Picasso
 import java.util.ArrayList
 
-/**
- * [android.support.v7.widget.RecyclerView.Adapter] to adapt
- * [Item] items into [RecyclerView] via [ItemViewHolder]
- *
- *
- * Created by ZARA on 02/02/2019.
- */
 internal class ItemsAdapter(private val listener: OnItemsAdapterListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -54,9 +47,6 @@ internal class ItemsAdapter(private val listener: OnItemsAdapterListener) :
         notifyDataSetChanged()
     }
 
-    /**
-     * Holder of [Item]
-     */
     inner class ItemViewHolder(dataBinding: ViewDataBinding) : RecyclerView.ViewHolder(dataBinding.root) {
 
         private val dataBinding: ViewDataBinding

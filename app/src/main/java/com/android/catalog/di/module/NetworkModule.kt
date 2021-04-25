@@ -6,7 +6,7 @@ import com.android.catalog.data.source.CategoryRepositoryImp
 import com.android.catalog.data.source.ItemRepository
 import com.android.catalog.data.source.ItemRepositoryImp
 import com.android.catalog.data.source.local.AppDatabase
-import com.android.catalog.data.source.remote.RetrofitFactory.BASE_URL
+import com.android.catalog.util.Constants.BASE_URL
 import com.android.catalog.data.source.remote.RetrofitService
 import com.google.gson.Gson
 import dagger.Module
@@ -29,7 +29,8 @@ class NetworkModule {
         rxJava2CallAdapterFactory: RxJava2CallAdapterFactory,
         okHttpClient: OkHttpClient
     ): Retrofit {
-        return Retrofit.Builder().baseUrl(BASE_URL)
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
             .addConverterFactory(gsonConverterFactory)
             .addCallAdapterFactory(rxJava2CallAdapterFactory)
             .client(okHttpClient)
