@@ -17,4 +17,16 @@ class GetItemDetailUseCase @Inject constructor(private val repository: ItemRepos
     override fun buildUseCaseSingle(): Single<Item> {
         return repository.getItemDetail(itemId)
     }
+
+    fun deleteAsFavorite(item: Item) {
+        repository.deleteItem(item)
+    }
+
+    fun addAsFavorite(item: Item) {
+        repository.addItem(item)
+    }
+
+    fun isFavorite(itemId: Long): Boolean {
+        return repository.isFavorite(itemId)
+    }
 }

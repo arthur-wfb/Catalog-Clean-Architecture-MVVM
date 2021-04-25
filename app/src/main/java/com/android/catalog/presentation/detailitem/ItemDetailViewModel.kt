@@ -6,11 +6,12 @@ import com.android.catalog.data.Item
 import com.android.catalog.domain.usecase.GetItemDetailUseCase
 import javax.inject.Inject
 
-class ItemDetailViewModel@Inject constructor(private val getItemDetailUseCase: GetItemDetailUseCase) : ViewModel() {
+class ItemDetailViewModel @Inject constructor(private val getItemDetailUseCase: GetItemDetailUseCase) : ViewModel() {
 
     private val TAG = ItemDetailViewModel::class.java.simpleName
     val itemData = MutableLiveData<Item>()
     val isLoad = MutableLiveData<Boolean>()
+    val isFavorite = MutableLiveData<Boolean>()
 
     init {
         isLoad.value = false
@@ -28,5 +29,20 @@ class ItemDetailViewModel@Inject constructor(private val getItemDetailUseCase: G
                 it.printStackTrace()
             }
         )
+    }
+
+    fun updateFavoriteStatus() {
+        if (itemData.value == null) return
+        if (isFavorite.value == true) {
+            isFavorite.value = false
+            getItemDetailUseCase.deleteAsFavorite(itemData.value!!)
+        } else {
+            isFavorite.value = true
+            getItemDetailUseCase.addAsFavorite(itemData.value!!)
+        }
+    }
+
+    fun checkFavoriteStatus(itemId: Long) {
+        isFavorite.value = getItemDetailUseCase.isFavorite(itemId)
     }
 }

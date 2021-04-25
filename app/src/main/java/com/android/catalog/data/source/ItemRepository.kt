@@ -12,4 +12,10 @@ interface ItemRepository {
     fun getItems(categoryId: Long?): Single<List<Item>>
 
     fun getItemDetail(itemId: Long?): Single<Item>
+
+    fun deleteItem(item: Item)
+
+    fun addItem(item: Item)
+
+    fun isFavorite(itemId: Long): Boolean
 }

@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF3F3F</color>
     <color name="colorTextPrimary">#202020</color>
     <color name="colorTextSecondary">#737373</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGolden">#FF7227</color>
 </resources>
