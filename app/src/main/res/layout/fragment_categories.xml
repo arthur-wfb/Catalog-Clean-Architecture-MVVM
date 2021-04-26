@@ -23,7 +23,7 @@
 
 
         <ProgressBar
-                android:visibility="@{categoriesViewModel.isLoad()?View.GONE:View.VISIBLE}"
+                android:visibility="@{categoriesViewModel.isLoadData ? View.GONE : View.VISIBLE}"
                 android:id="@+id/categories_progress_bar"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"

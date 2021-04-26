@@ -1,6 +1,6 @@
 package com.android.catalog.data.source.local.dao
 
-import android.arch.persistence.room.*
+import androidx.room.*
 import com.android.catalog.data.Item
 
 @Dao

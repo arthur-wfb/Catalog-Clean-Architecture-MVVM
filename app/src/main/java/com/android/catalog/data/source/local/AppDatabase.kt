@@ -1,7 +1,7 @@
 package com.android.catalog.data.source.local
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.RoomDatabase
 import com.android.catalog.data.Item
 import com.android.catalog.data.source.local.dao.ItemDao
 

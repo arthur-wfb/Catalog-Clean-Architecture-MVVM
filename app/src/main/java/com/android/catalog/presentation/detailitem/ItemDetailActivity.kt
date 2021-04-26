@@ -5,9 +5,9 @@ import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
-import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.databinding.DataBindingUtil
 import com.android.catalog.R
 import com.android.catalog.databinding.ActivityItemDetailBinding
 import com.squareup.picasso.Picasso

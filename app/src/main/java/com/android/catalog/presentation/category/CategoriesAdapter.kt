@@ -1,10 +1,10 @@
 package com.android.catalog.presentation.category
 
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import com.android.catalog.R
 import com.android.catalog.data.source.Category
 import com.android.catalog.databinding.HolderCategoryBinding

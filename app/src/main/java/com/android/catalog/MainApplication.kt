@@ -3,7 +3,6 @@ package com.android.catalog
 import android.app.Activity
 import android.app.Application
 import android.content.Context
-import android.support.multidex.MultiDex
 import com.android.catalog.di.component.DaggerApplicationComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -17,7 +16,6 @@ class MainApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        MultiDex.install(this)
         DaggerApplicationComponent
             .builder()
             .application(this)
@@ -26,11 +24,6 @@ class MainApplication : Application(), HasActivityInjector {
     }
 
     override fun activityInjector() = activityInjector
-
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
-    }
 
     companion object {
 

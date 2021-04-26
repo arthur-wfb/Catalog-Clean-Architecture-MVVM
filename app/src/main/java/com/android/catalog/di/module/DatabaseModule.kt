@@ -1,8 +1,8 @@
 package com.android.catalog.di.module
 
 import dagger.Provides
-import android.arch.persistence.room.Room
 import android.app.Application
+import androidx.room.Room
 import com.android.catalog.data.source.local.AppDatabase
 import com.android.catalog.data.source.local.dao.ItemDao
 import dagger.Module

@@ -19,6 +19,7 @@ class CategoriesViewModel @Inject constructor(private val getCategoryListUseCase
     }
 
     val category: Category? get() = categoryData.value
+    val isLoadData: Boolean? get() = isLoad.value
 
     fun set(category: Category) = {
         categoryData.value = category

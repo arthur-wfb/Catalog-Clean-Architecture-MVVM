@@ -4,12 +4,12 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
-import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.android.catalog.R
 import com.android.catalog.data.source.Category
 import com.android.catalog.databinding.FragmentCategoriesBinding
@@ -18,7 +18,6 @@ import dagger.android.support.DaggerFragment
 import java.lang.ClassCastException
 
 import javax.inject.Inject
-
 
 class CategoriesFragment : DaggerFragment(), OnCategoriesAdapterListener {
 

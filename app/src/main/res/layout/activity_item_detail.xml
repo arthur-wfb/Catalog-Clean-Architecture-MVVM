@@ -84,7 +84,7 @@
                         tools:ignore="RtlCompat">
 
                     <TextView
-                            android:text="@{itemDetailViewModel.itemData.title}"
+
                             android:id="@+id/detail_title_text_view"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
